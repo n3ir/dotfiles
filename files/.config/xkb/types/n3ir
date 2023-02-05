@@ -1,0 +1,16 @@
+default partial xkb_types "n3ir" {
+  include "complete"
+
+  virtual_modifiers Layer1;
+
+  type "CAPS_MOD" {
+    modifiers = Shift+Mod2;
+    map[None] = Level1;
+    map[Shift] = Level2;
+    map[Mod2] = Level3;
+    map[Shift+Mod2] = Level3;
+    level_name[Level1] = "Base";
+    level_name[Level2] = "Shift";
+    level_name[Level3] = "Hyper";
+  };
+};

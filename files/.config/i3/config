@@ -1,0 +1,6 @@
+# config by Rien Oomens
+
+include ~/.config/i3/general.conf
+include ~/.config/i3/theme.conf
+include ~/.config/i3/keybindings.conf
+include ~/.config/i3/modes.conf

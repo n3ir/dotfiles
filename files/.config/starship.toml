@@ -1,0 +1,151 @@
+format = "$directory$all$character"
+add_newline = true
+
+palette = 'catppuccin'
+
+# Define custom colors
+[palettes.catppuccin]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#000000"
+
+[git_branch]
+style = "fg:peach"
+format = "[ $symbol$branch(:$remote_branch)]($style)"
+
+[git_status]
+style = "fg:peach"
+format = '[$all_status$ahead_behind ]($style)'
+
+[directory]
+style = "fg:blue"
+format = "[ $path ]($style)"
+truncate_to_repo = false
+
+[line_break]
+disabled = false
+
+[character]
+success_symbol = "[$percentage](bold green)[➜](bold green)"
+error_symbol = "[$percentage](bold green)[➜](bold red)"
+
+[[battery.display]]
+threshold = 100
+style = "bold green"
+
+[bun]
+format = "via [$symbol]($style) [$percentage]($style)"
+
+[buf]
+format = "via [$symbol]($style) [$percentage]($style)"
+
+[cmake]
+format = "via [$symbol]($style) [$percentage]($style)"
+
+[cobol]
+format = "via [$symbol]($style) [$percentage]($style)"
+
+[crystal]
+format = "via [$symbol]($style) [$percentage]($style)"
+
+[daml]
+format = "via [$symbol]($style) [$percentage]($style)"
+
+[dart]
+format = "via [$symbol]($style) [$percentage]($style)"
+
+[deno]
+format = "via [$symbol]($style) [$percentage]($style)"
+
+[dotnet]
+format = "[$symbol(🎯 $tfm )]($style)[$percentage]($style)"
+
+[elixir]
+format = 'via [$symbol]($style) [$percentage]($style)'
+
+[elm]
+format = 'via [$symbol]($style) [$percentage]($style)'
+
+[erlang]
+format = 'via [$symbol]($style) [$percentage]($style)'
+
+[golang]
+format = 'via [$symbol]($style) [$percentage]($style)'
+
+[helm]
+format = 'via [$symbol]($style) [$percentage]($style)'
+
+[julia]
+format = 'via [$symbol]($style) [$percentage]($style)'
+
+[kotlin]
+format = 'via [$symbol]($style) [$percentage]($style)'
+
+[lua]
+format = 'via [$symbol]($style) [$percentage]($style)'
+
+[meson]
+format = 'via [$symbol]($style) [$percentage]($style)'
+
+[nim]
+format = 'via [$symbol]($style) [$percentage]($style)'
+
+[nodejs]
+format = 'via [$symbol]($style) [$percentage]($style)'
+
+[ocaml]
+format = 'via [$symbol(\($switch_indicator$switch_name\) )]($style) [$percentage]($style)'
+
+[perl]
+format = 'via [$symbol]($style) [$percentage]($style)'
+
+[php]
+format = 'via [$symbol]($style) [$percentage]($style)'
+
+[pulumi]
+format = 'via [$symbol$stack]($style)($style) [$percentage]($style)'
+
+[purescript]
+format = 'via [$symbol]($style) [$percentage]($style)'
+
+[python]
+format = 'via [$symbol]($style) [$percentage]($style)'
+
+[raku]
+format = 'via [$symbol]($style) [$percentage]($style)'
+
+[red]
+format = 'via [$symbol]($style) [$percentage]($style)'
+
+[rlang]
+format = 'via [$symbol]($style) [$percentage]($style)'
+
+[ruby]
+format = 'via [$symbol]($style) [$percentage]($style)'
+
+[rust]
+format = 'via [$symbol]($style) [$percentage]($style)'
+
+[swift]
+format = 'via [$symbol]($style) [$percentage]($style)'
+
+[vagrant]
+format = 'via [$symbol]($style) [$percentage]($style)'
+
+[vlang]
+format = 'via [$symbol]($style) [$percentage]($style)'
+
+[zig]
+format = 'via [$symbol]($style) [$percentage]($style)'

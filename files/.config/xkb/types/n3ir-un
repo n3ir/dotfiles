@@ -1,0 +1,28 @@
+default partial xkb_types "n3ir" {
+  include "complete"
+
+  type "CAPS_MOD" {
+    modifiers = Shift+Mod2;
+    map[None] = Level1;
+    map[Shift] = Level2;
+    map[Mod2] = Level3;
+    map[Shift+Mod2] = Level3;
+    level_name[Level1] = "Base";
+    level_name[Level2] = "Shift";
+    level_name[Level3] = "Hyper";
+  };
+
+  type "CAPS_MOD4" {
+    modifiers = Shift+Mod2+Mod1;
+    map[None] = Level1;
+    map[Shift] = Level2;
+    map[Mod2] = Level3;
+    map[Shift+Mod2] = Level3;
+    map[Mod1+Mod2] = Level4;
+    map[Shift+Mod1+Mod2] = Level4;
+    level_name[Level1] = "Base";
+    level_name[Level2] = "Shift";
+    level_name[Level3] = "Hyper";
+    level_name[Level4] = "Alt+Hyper";
+  };
+};

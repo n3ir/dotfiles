@@ -1,0 +1,7 @@
+default partial xkb_compatibility "n3ir" {
+  include "complete"
+
+  interpret Caps_Lock+AnyOfOrNone(all) {
+    action = SetMods(modifiers=Mod2);
+  };
+};

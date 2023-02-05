@@ -1,0 +1,125 @@
+/**
+ * ROFI Color theme
+ * User: Qball
+ * Copyright: Dave Davenport
+ */
+
+* {
+    background-color:  transparent; 
+    // Bold, Italic, Underline
+    highlight:     bold #ffffff;
+}
+window {
+    background-color: #282c34cd;
+    border-color:     white;
+    border-radius:    0 15mm 15mm 0;
+
+    padding: 10mm;
+
+    height:   100%;
+    width:    150mm;
+    border:  1mm 1mm 1mm 0px;
+    text-color: white;
+
+
+    location: west;
+    anchor:   west;
+}
+inputbar {
+    background-color: transparent;
+    text-color: #282c34;
+    children: [prompt, entry, textbox-end];
+    spacing: 1mm;
+}
+prompt {
+  border-radius: 5mm 0mm 0mm 5mm;
+  width: 15mm;
+}
+textbox-end {
+  border-radius: 0mm 5mm 5mm 0mm;
+  width: 15mm;
+  expand: false;
+}
+entry {
+  background-color: grey;
+}
+prompt, entry, textbox-end, num-filtered-rows {
+  background-color: #98c379;
+  text-color: #282c34;
+  padding: 2mm;
+  vertical-align: 0.5;
+}
+element {
+    border-radius: 5mm;
+    children: [element-icon];
+}
+textbox-current-entry {
+    border-radius: 5mm;
+    background-color: #61afef;
+    text-color: #282c34;
+    placeholder: "";
+    padding: 2mm;
+    horizontal-align: 0.5;
+  }
+element-icon {
+  expand: true;
+  size: 10mm;
+  vertial-align: 0.5;
+  horizontal-align: 0.5;
+  padding: 2mm;
+}
+
+
+mainbox {
+    expand: true;
+    background-color: transparent;
+    spacing:  5mm;
+    children: [
+                inputbar,
+                textbox-current-entry,
+                icon-current-entry,
+                listview
+    ];
+}
+icon-current-entry {
+    size: 40mm;
+}
+listview {
+    padding: 0em;
+    dynamic: false;
+    lines: 0;
+    columns: 8;
+    flow: horizontal;
+}
+element selected  normal {
+    background-color: #61afef;
+}
+element normal active {
+    text-color: #61afef;
+}
+element normal urgent {
+    text-color: #e06c75;
+}
+element alternate normal {
+}
+element alternate active {
+    text-color: #61afef;
+}
+element alternate urgent {
+    text-color: #e06c75;
+}
+element selected active {
+    background-color: #61afef;
+    text-color: #282c34;
+}
+element selected urgent {
+    background-color: #e06c75;
+    text-color: #282c34;
+}
+error-message {
+    expand: true;
+    background-color: #e06c75;
+    border-color: #e06c75;
+    border: 2px;
+    padding: 1em;
+}

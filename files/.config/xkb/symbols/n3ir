@@ -1,0 +1,144 @@
+// My keyboard layout
+default partial alphanumeric_keys modifier_keys
+xkb_symbols "base" {
+  include "us(basic)"
+  name[Group1]= "English but pro";
+  name[Group2]= "English but pro(2)";
+
+  modifier_map Mod2 { Hyper_L };
+  key <CAPS> { [ Hyper_L, Hyper_L ] };
+
+  key <AC04> {
+    type = "CAPS_MOD",
+    symbols[Group1] = [ f, F, VoidSymbol ],
+    actions[Group1] = [ NoAction(), NoAction(), LockGroup(group=2) ],
+    symbols[Group2] = [ VoidSymbol, VoidSymbol, VoidSymbol ],
+    actions[Group2] = [ LockGroup(group=1), LockControls(controls=mousekeys), NoAction() ]
+  };
+
+  key <AC06> {
+    type = "CAPS_MOD",
+    symbols[Group1] = [ h, H, Left ],
+    actions[Group1] = [ NoAction(), NoAction(), RedirectKey(key=Left, clearmods=Mod2) ],
+    symbols[Group2] = [ VoidSymbol, H, braceleft ],
+    actions[Group2] = [ MovePtr(x=-1,y=+0), NoAction(), RedirectKey(key=braceleft, clearmods=Mod2) ]
+  };
+
+  key <AC07> {
+    type = "CAPS_MOD",
+    symbols[Group1] = [ j, J, Down ],
+    actions[Group1] = [ NoAction(), NoAction(), RedirectKey(key=Down, clearmods=Mod2) ],
+    symbols[Group2] = [ VoidSymbol, parenleft, braceright ],
+    actions[Group2] = [ MovePtr(x=+0,y=+1), RedirectKey(key=parenleft, clearmods=Shift), RedirectKey(key=braceleft, clearmods=Mod2) ]
+  };
+
+  key <AC08> {
+    type = "CAPS_MOD",
+    symbols[Group1] = [ k, K, Up ],
+    actions[Group1] = [ NoAction(), NoAction(), RedirectKey(key=Up, clearmods=Mod2) ],
+    symbols[Group2] = [ VoidSymbol, parenright, braceright ],
+    actions[Group2] = [ MovePtr(x=+0,y=-1), RedirectKey(key=parenright, clearmods=Shift), RedirectKey(key=braceright, clearmods=Mod2) ]
+  };
+
+  key <AC09> {
+    type = "CAPS_MOD",
+    symbols[Group1] = [ l, L, Right ],
+    actions[Group1] = [ NoAction(), NoAction(), RedirectKey(key=Right, clearmods=Mod2) ],
+    symbols[Group2] = [ VoidSymbol, L, VoidSymbol ],
+    actions[Group2] = [ MovePtr(x=+1,y=+0), NoAction(), RedirectKey(key=VoidSymbol, clearmods=Mod2) ]
+  };
+
+  key <AD01> {
+    type = "CAPS_MOD",
+    symbols[Group1] = [ q, Q, quotedbl ],
+    actions[Group1] = [ NoAction(), NoAction(), RedirectKey(key=quotedbl, clearmods=Mod2) ],
+    symbols[Group2] = [ 1, exclam, quotedbl ],
+    actions[Group2] = [ NoAction(), RedirectKey(key=exclam, clearmods=Mod2), RedirectKey(key=quotedbl, clearmods=Mod2) ]
+  };
+
+  key <AD02> {
+    type = "CAPS_MOD",
+    symbols[Group1] = [ w, W, semicolon ],
+    actions[Group1] = [ NoAction(), NoAction(), RedirectKey(key=semicolon, clearmods=Mod2) ],
+    symbols[Group2] = [ 2, at, apostrophe ],
+    actions[Group2] = [ NoAction(), NoAction(), RedirectKey(key=semicolon, clearmods=Mod2) ]
+  };
+
+  key <AD03> {
+    type = "CAPS_MOD",
+    symbols[Group1] = [ e, E, Escape ],
+    actions[Group1] = [ NoAction(), NoAction(), RedirectKey(key=Escape, clearmods=Mod2) ],
+    symbols[Group2] = [3, numbersign, colon ],
+    actions[Group2] = [ NoAction(), NoAction(), NoAction() ]
+  };
+
+  key <AD04> {
+    type = "CAPS_MOD",
+    symbols[Group1] = [ r, R, r ],
+    actions[Group1] = [ NoAction(), NoAction(), NoAction()],
+    symbols[Group2] = [4, dollar, slash ],
+    actions[Group2] = [ NoAction(), NoAction(), NoAction() ]
+  };
+
+  key <AD05> {
+    type = "CAPS_MOD",
+    symbols[Group1] = [ t, T, t ],
+    actions[Group1] = [ NoAction(), NoAction(), NoAction()],
+    symbols[Group2] = [5, percent, slash ],
+    actions[Group2] = [ NoAction(), NoAction(), NoAction() ]
+  };
+
+  key <AD06> {
+    type = "CAPS_MOD",
+    symbols[Group1] = [ y, Y, y ],
+    actions[Group1] = [ NoAction(), NoAction(), NoAction()],
+    symbols[Group2] = [6, asciicircum, slash ],
+    actions[Group2] = [ NoAction(), NoAction(), NoAction() ]
+  };
+
+  key <AD07> {
+    type = "CAPS_MOD",
+    symbols[Group1] = [ u, U, BackSpace ],
+    actions[Group1] = [ NoAction(), NoAction(), RedirectKey(key=BackSpace, clearmods=Mod2) ],
+    symbols[Group2] = [ 7, ampersand, BackSpace ],
+    actions[Group2] = [ NoAction(), NoAction(), RedirectKey(key=BackSpace, clearmods=Mod2) ]
+  };
+  
+  key <AD08> {
+    type = "CAPS_MOD",
+    symbols[Group1] = [ i, I, Delete ],
+    actions[Group1] = [ NoAction(), NoAction(), RedirectKey(key=Delete, clearmods=Mod2) ],
+    symbols[Group2] = [ 8, asterisk, Delete ],
+    actions[Group2] = [ NoAction(), NoAction(), RedirectKey(key=Delete, clearmods=Mod2) ]
+  };
+
+  key <AD09> {
+    type = "CAPS_MOD",
+    symbols[Group1] = [ o, O, VoidSymbol ],
+    actions[Group1] = [ NoAction(), NoAction(), NoAction() ],
+    symbols[Group2] = [ 9, parenleft, VoidSymbol ],
+    actions[Group2] = [ NoAction(), NoAction(), NoAction() ]
+  };
+
+  key <AD10> {
+    type = "CAPS_MOD",
+    symbols[Group1] = [ p, P, VoidSymbol ],
+    actions[Group1] = [ NoAction(), NoAction(), NoAction() ],
+    symbols[Group2] = [ 0, parenright, VoidSymbol ],
+    actions[Group2] = [ NoAction(), NoAction(), NoAction() ]
+  };
+
+  include "level3(ralt_switch)"
+};
+
+// Fix
+partial alphanumeric_keys
+xkb_symbols "euro" {
+
+     include "us(basic)"
+     name[Group1]= "English (US, euro on 5)";
+
+     include "eurosign(5)"
+
+     include "level3(ralt_switch)"
+ };
