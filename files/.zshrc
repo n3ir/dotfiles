@@ -111,6 +111,7 @@ source /usr/share/nvm/init-nvm.sh
 alias sudo='sudo '
 alias pacman-autoremove='sudo pacman -Rcns $(pacman -Qdtq)'
 alias nv="nvim"
+alias hx="helix"
 alias :q=exit
 alias :q!=exit
 
