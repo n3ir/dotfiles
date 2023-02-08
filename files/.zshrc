@@ -138,6 +138,10 @@ export GOPATH="$HOME/projects/golib"
 export GOPATH="$GOPATH:$HOME/projects/go"
 export PATH="$HOME/projects/golib/bin:$PATH"
 
+export FLYCTL_INSTALL="/home/n3ir/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
 export PATH="$HOME/.local/share/scripts:$PATH"
 
 eval "$(starship init zsh)"
+

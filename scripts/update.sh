@@ -52,3 +52,6 @@ cp ~/.zshrc ~/dotfiles/files/.zshrc
 
 rm ~/dotfiles/files/.zshenv
 cp ~/.zshenv ~/dotfiles/files/.zshenv
+
+rm ~/dotfiles/files/.zprofile
+cp ~/.zprofile ~/dotfiles/files/.zprofile
